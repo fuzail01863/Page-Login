@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <title>Login an Account</title>
+</head>
+<body>
+
+    <div class="signup-container">
+        
+        <div class="header-section">
+            <h1>Login an account</h1>
+            <!-- <p>Get started with your free account today.</p> -->
+        </div>
+
+        <form id="login-form">
+            <div class="input-group">
+                <label for="email-inp">Email Address</label>
+                <input type="email" id="email-inp" placeholder="name@example.com" required>
+            </div>
+            
+            <div class="input-group">
+                <label for="password-inp">Password</label>
+                <input type="password" id="password-inp" placeholder="••••••••" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Login</button>
+        </form>
+
+        <form id="login-form">
+            <!-- <button type="submit" class="submit-btn">Login</button> -->
+        </form>
+
+        <div class="divider">
+            <span>or continue with</span>
+        </div>
+
+        <div class="social-login-container">
+            <button type="button" id="google-btn" class="social-btn">
+                <img src="https://www.svgrepo.com/show/475656/google-color.svg" alt="Google" class="social-icon">
+                Google
+            </button>
+            <button type="button" id="facebook-btn" class="social-btn">
+                <img src="https://www.svgrepo.com/show/475647/facebook-color.svg" alt="Facebook" class="social-icon">
+                Facebook
+            </button>
+        </div>
+        <div class="footer-section">
+            <p class="terms-text">
+                By login in, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.
+            </p>
+        </div>
+
+
+        <!-- <div class="footer-section">
+            <hr class="divider">
+            <p class="terms-text">
+                By login in, you agree to our <a href="#">Terms</a> & <a href="#">Privacy Policy</a>.
+            </p>
+        </div> -->
+
+    </div>
+
+    <script type="module" src="login.js"></script>
+</body>
+</html>

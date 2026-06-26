@@ -1,0 +1,267 @@
+/* Base Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+}
+
+/* Container Card */
+.card-container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 440px;
+    border-radius: 1rem;
+    border: 1px solid rgba(15, 23, 42, 0.08);
+    padding: 2.5rem;
+    box-shadow: 0 12px 30px rgba(2, 6, 23, 0.05);
+    transition: all 0.3s ease;
+}
+
+/* Header Styling */
+.card-header {
+    text-align: center;
+    margin-bottom: 2rem;
+ }
+
+.card-header h2 {
+    font-size: 1.875rem;
+    font-weight: 700;
+    color: #1e293b;
+    letter-spacing: -0.025em;
+}
+
+.card-header p {
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-top: 0.5rem;
+}
+
+/* Form Controls */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #334155;
+    margin-bottom: 0.5rem;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.75rem;
+    font-size: 0.875rem;
+    color: #1e293b;
+    outline: none;
+    transition: all 0.2s ease;
+}
+
+.form-input::placeholder {
+    color: #94a3b8;
+}
+
+.form-input:focus {
+    border-color: #4f46e5;
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px #e0e7ff;
+}
+
+/* Buttons styling */
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgba(79, 70, 229, 0.1), 0 2px 4px -1px rgba(79, 70, 229, 0.06);
+    transition: all 0.2s ease;
+    margin-top: 0.25rem;
+}
+
+.submit-btn:hover {
+    background-color: #4338ca;
+    box-shadow: 0 10px 15px -3px rgba(79, 70, 229, 0.2);
+}
+
+.submit-btn:active {
+    background-color: #3730a3;
+}
+
+/* Login Redirect Section (New) */
+.login-redirect {
+    text-align: center;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    color: #64748b;
+}
+
+.login-link {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 600;
+    margin-left: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+    color: #4338ca;
+}
+
+
+/* Message Box (hidden by default) */
+#message-box {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    max-width: 380px; /* limit width so it stays centered and not full-width */
+    padding: 0.85rem 1.5rem; /* more top/bottom padding for a bit larger look */
+    border: 1px solid #e2e8f0;
+    margin: 0.75rem auto 0 auto; /* center horizontally with extra left/right space */
+    min-height: 2.5rem;
+    font-size: 0.875rem;
+    text-align: center;
+    border-radius: 0.75rem;
+    transition: box-shadow 0.25s ease, transform 0.15s ease, opacity 0.18s ease;
+    opacity: 0;
+}
+
+/* Show when `.show` class is added */
+#message-box.show {
+    display: flex;
+    opacity: 1;
+}
+
+/* Variants when message is shown */
+#message-box.show.success {
+    border-color: #bbf7d0;
+    background-color: #ecfdf5;
+    color: #064e3b;
+}
+
+#message-box.show.error {
+    border-color: #fecaca;
+    background-color: #fff1f2;
+    color: #7f1d1d;
+}
+
+/* Active shadow when register is clicked */
+.message-active {
+    box-shadow: 0 12px 30px rgba(2, 6, 23, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Footer / Terms Section */
+.card-footer {
+    margin-top: 2rem;
+    text-align: center;
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.5rem;
+}
+
+ .footer-text {
+    font-size: 0.75rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+.footer-link {
+    color: #4f46e5;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}
+/* Divider Line (or continue with) */
+.divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 20px 0;
+    color: #888888;
+    font-size: 14px;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.divider:not(:empty)::before {
+    margin-right: .5em;
+}
+
+.divider:not(:empty)::after {
+    margin-left: .5em;
+}
+
+/* Social Buttons Container */
+.social-login-container {
+    display: flex;
+    gap: 12px; /* Dono buttons ke darmiyan gap */
+    margin-bottom: 20px;
+}
+
+/* Base Social Button Styling */
+.social-btn {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+/* Hover Effect */
+.social-btn:hover {
+    background-color: #f9fafb;
+    border-color: #9ca3af;
+}
+
+/* Icons Size */
+.social-icon {
+    width: 18px;
+    height: 18px;
+}
+
+/* Responsiveness for Smaller Screen sizes */
+@media (max-width: 480px) {
+    .card-container {
+        padding: 1.5rem;
+    }
+    .card-header h2 {
+        font-size: 1.5rem;
+    }
+}

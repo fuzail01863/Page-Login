@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        
+        <aside class="sidebar" id="sidebar">
+            <div class="logo-section">
+                <h2>Dashboard</h2>
+                <button id="close-sidebar-btn" class="close-btn">&times;</button>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-item active">Overview</a>
+                <a href="#" class="nav-item" id="post-btn">Post</a>
+                <a href="#" class="nav-item" id="signOut-btn">Sign Out</a>
+                <a href="" class="nav-item" id="deleteAcc-btn">Delete Account</a>
+                <!-- <button id="deleteAcc-btn">Delete account</button> -->
+            </nav>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            
+            <header class="top-header">
+                <div class="header-left">
+                    <button id="open-sidebar-btn" class="menu-btn">&#9776;</button>
+                    <div class="welcome-text">
+                        <h1>Welcome Back!</h1>
+                        <p id="user-email">user@example.com</p>
+                    </div>
+                </div>
+                <div class="avatar">
+                    <span id="avatar-letter">U</span>
+                </div>
+            </header>
+
+            <section class="dashboard-grid">
+                <div class="stat-card">
+                    <h3>Account Status</h3>
+                    <p class="stat-value text-green">Active</p>
+                    <span class="stat-desc">Your profile is fully verified.</span>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Recent Activity</h3>
+                    <p class="stat-value" id="created-date">June 2026</p>
+                    <span class="stat-desc">Account creation timestamp.</span>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Security</h3>
+                    <p class="stat-value">Secured</p>
+                    <span class="stat-desc">Firebase Auth Protected.</span>
+                </div>
+            </section>
+            <section id="post-section" style=" padding: 20px;">
+                <div class="post-header" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h2>Manage Posts</h2>
+                    <button id="create-post-btn" style="background-color: #4F46E5; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; font-weight: 500;">
+                        + Create Post
+                    </button>
+                </div>
+                
+                <div class="posts-container" id="posts-container">
+                    <p style="color: #6B7280;">No posts available. Click "Create Post" to make one!</p>
+                </div>
+            </section>  
+
+            
+
+        </main>
+
+    </div>
+
+    <script type="module" src="dashboard.js"></script>
+</body>
+</html>
