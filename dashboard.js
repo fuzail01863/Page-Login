@@ -196,7 +196,28 @@ signOutBtn.addEventListener("click", () => {
     });
 });
 
+const postBtn = document.getElementById("post-btn");
+const postSection = document.getElementById("post-section");
+const createPostBtn = document.getElementById("create-post-btn");
+const postsContainer = document.getElementById("posts-container");
 
+if (postBtn && postSection) {
+    postBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        postSection.style.display = "block";
+    });
+}
 
-
+if (createPostBtn && postsContainer) {
+    createPostBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        postsContainer.innerHTML = `
+        <div class="post-form">
+            <h3>Create a New Post</h3>
+            <input type="text" id="post-title" placeholder="Post Title" required>
+            <textarea id="post-content" placeholder="Post Content" required></textarea>
+            <button id="submit-post-btn">Submit Post</button>
+        </div>`;
+    });
+}
 // if (signOutBtn) signOutBtn.addEventListener("click", () => userSignOut())

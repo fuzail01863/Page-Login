@@ -133,8 +133,9 @@ body {
 .stat-card {
     background-color: #ffffff;
     border: 1px solid #e4e4e7;
-    border-radius: 12px;
+    border-radius: 18px;
     padding: 24px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
 }
 
 .stat-card h3 {
@@ -144,7 +145,7 @@ body {
 }
 
 .stat-value {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
     margin-bottom: 6px;
 }
@@ -152,32 +153,199 @@ body {
 .text-green { color: #16a34a; }
 .stat-desc { font-size: 13px; color: #a1a1aa; }
 
+.post-section {
+    background-color: #ffffff;
+    border: 1px solid #e4e4e7;
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
+    margin-top: 24px;
+}
+
+.post-header {
+    gap: 16px;
+}
+
+.post-header h2 {
+    font-size: 22px;
+    margin: 0;
+}
+
+#posts-container {
+    border-top: 1px solid #e4e4e7;
+    padding-top: 18px;
+}
+
+#posts-container p {
+    color: #52525b;
+    line-height: 1.7;
+}
+
+.post-form {
+    display: grid;
+    gap: 16px;
+}
+
+.post-form input,
+.post-form textarea {
+    width: 100%;
+    border: 1px solid #d4d4d8;
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 15px;
+    color: #27272a;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-form input:focus,
+.post-form textarea:focus {
+    border-color: #7c3aed;
+    box-shadow: 0 0 0 4px rgba(124, 58, 237, 0.08);
+}
+
+#submit-post-btn,
+#create-post-btn,
+.nav-item {
+    transition: all 0.2s ease;
+}
+
+#submit-post-btn,
+#create-post-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #4f46e5;
+    color: #ffffff;
+    border: none;
+    border-radius: 12px;
+    padding: 12px 18px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 140px;
+    width: auto;
+}
+
+.post-form {
+    display: grid;
+    gap: 16px;
+    justify-items: end;
+}
+
+.post-form #submit-post-btn {
+    width: 140px;
+    justify-self: end;
+}
+
+#submit-post-btn:hover,
+#create-post-btn:hover,
+.nav-item:hover,
+.nav-item.active {
+    transform: translateY(-1px);
+}
+
+.nav-item {
+    cursor: pointer;
+}
+
+.post-form textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
 /* --- Responsive Media Query (Mobiles/Tablets) --- */
 @media (max-width: 768px) {
-    .sidebar {
-        transform: translateX(-100%); /* Screen se baahar chupa diya */
+    .dashboard-layout {
+        flex-direction: column;
     }
 
-    /* Jab active class lagegi to sidebar screen par aa jayega */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 280px;
+        transform: translateX(-100%);
+        box-shadow: 0 24px 60px rgba(15, 23, 42, 0.2);
+    }
+
     .sidebar.active {
         transform: translateX(0);
     }
 
     .main-content {
-        margin-left: 0; /* Mobile par poori width le ga */
+        margin-left: 0;
         padding: 20px;
     }
 
-    /* Buttons show karein choti screen par */
+    .top-header {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .header-left {
+        width: 100%;
+    }
+
+    .welcome-text h1 {
+        font-size: 24px;
+    }
+
+    .dashboard-grid {
+        gap: 16px;
+    }
+
     .menu-btn {
         display: block;
-        font-size: 26px;
+        font-size: 28px;
         color: #18181b;
+        background-color: #ffffff;
+        border: 1px solid #e4e4e7;
+        border-radius: 12px;
+        width: 48px;
+        height: 48px;
     }
 
     .close-btn {
         display: block;
         font-size: 30px;
         color: #ffffff;
+        background: transparent;
+    }
+
+    .nav-links {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 15px;
+    }
+
+    .main-content {
+        padding: 16px;
+    }
+
+    .welcome-text h1 {
+        font-size: 22px;
+    }
+
+    .stat-card {
+        padding: 20px;
+    }
+
+    .post-section {
+        padding: 22px;
+    }
+
+    .post-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #create-post-btn {
+        width: 100%;
     }
 }

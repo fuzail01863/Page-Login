@@ -27,13 +27,13 @@ const msg = {
     }
 };
 
-// let validateForm = () => {
-//     if (emailInput.value.length < 1 || passInput.value.length < 1) {
-//         console.error('Please fill in all fields.');
-//         return false;
-//     }
-//     return true;
-// };
+let validateForm = () => {
+    if (emailInput.value.length < 1 || passInput.value.length < 1) {
+        console.error('Please fill in all fields.');
+        return false;
+    }
+    return true;
+};
 
 
 
